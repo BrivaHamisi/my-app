@@ -7,7 +7,13 @@ class Form extends Component {
       this.state = {
          username: '',
          password: '',
+         posts:[]
       }
+    }
+    componentDidMount(){
+        fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch')
+        .then(response => response.json)
+        .then(data => this.setState({posts:data}))
     }
 
     usernameHandler = (event) => {
@@ -22,11 +28,17 @@ class Form extends Component {
         })
     }
   render() {
+    const {posts} = 'container'
     return (
       <div className='container'>
         <input type='text' value={this.state.username} placeholder = "Enter Your Username" className='form-control'onChange={this.usernameHandler}/>
         <input type='password' value={this.state.password} placeholder = "Enter Your Password" className='form-control' onChange={this.passwordHandler}/>
         <button className='btn btn-primary'>Click Me</button>
+
+        {/* {posts.map(post =>
+            <h2 key={post.id}>{post.title}</h2>
+            
+            )} */}
       </div>
     )
   }

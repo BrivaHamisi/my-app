@@ -7,6 +7,7 @@ import Name from './components/Name'
 import Example from './components/Example'
 import Example2 from './components/Example2'
 import Form  from './components/Form';
+import MyFragment from './components/MyFragment';
 
 function App() {
   function clicked(){
@@ -15,10 +16,11 @@ function App() {
 
   return (
     <div className='container'>
-      <Name/>
+      {/* <Name/>
       <Example names={['Python', 'Java', 'Javascript','C#']} />
       <Example2 names={['React', 'React Native', 'Django','Flask']} />
-      <Form/>
+      <Form/> */}
+       <MyFragment/>
     </div>
   );
 }
