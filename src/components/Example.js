@@ -1,9 +1,17 @@
  import React from 'react'
+
+ function myElement(names){
+  return names.map(name =>
+    <div key={name}>
+      {`${name}`} 
+    </div>
+    )
+ }
  
- function Example() {
+ function Example(props) {
    return (
      <div>
-        <h3>Example</h3>
+        <h3>{myElement(props.names)}</h3>
      </div>
    )
  }
