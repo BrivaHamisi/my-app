@@ -4,6 +4,7 @@ import Hello from './components/Hello'
 import FunComponent from './components/funComponent'
 import MyClass from './components/MyClass'
 import Name from './components/Name'
+import Example from './components/Example'
 
 function App() {
   function clicked(){
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className='container'>
       <Name/>
+      <Example/>
     </div>
   );
 }
