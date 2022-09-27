@@ -1,8 +1,17 @@
 import React from 'react'
+import { MyContext } from './MyFragment'
 
 function ComponentB() {
   return (
-    <div>ComponentB</div>
+    <div>
+        <MyContext.Consumer>
+            {
+                data => {
+                    return <h2>{data}</h2>
+                }
+            }
+        </MyContext.Consumer>
+    </div>
   )
 }
 

@@ -1,11 +1,18 @@
 import React from 'react'
+import ComponentA from './ComponentA'
+
+export const MyContext = React.createContext()
 
 function MyFragment() {
   return (
-    <React.Fragment>
-        <h3> Fragment Example</h3>
-        <p>This is Fragment Example</p>
-    </React.Fragment>
+    <div className='container'>
+
+      <MyContext.Provider value="This is the value from Context">
+      <ComponentA/>
+      </MyContext.Provider>
+    
+        
+    </div>
   )
 }
 
