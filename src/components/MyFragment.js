@@ -1,23 +1,16 @@
 import React from 'react'
-import ComponentA from './ComponentA'
 import Counter from './Counter'
 import CounterHook from './CounterHook'
-import FetchData from './FetchData'
+import DataFetching from './DataFetching'
+import UseReducer from './UseReducer'
+import { useEffect, useReducer } from 'react'
 
-export const Context = React.createContext()
-
-
-export const MyContext = React.createContext()
 
 function MyFragment() {
   return (
     <div className='container'>
-      <Context.Provider value="This data is Sent with useContext Hook">
-      <ComponentA/>
-      </Context.Provider>
-      
-    
-        
+        {/* <UseReducer/> */}
+        <DataFetching/>
     </div>
   )
 }
