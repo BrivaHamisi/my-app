@@ -8,21 +8,18 @@ import Example from './components/Example'
 import Example2 from './components/Example2'
 import Form  from './components/Form';
 import MyFragment from './components/MyFragment';
+import {Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import Try from './components/Try';
 
 function App() {
-  function clicked(){
-    alert("Inside App.js")
+  return(
+    <Router>
+    <Routes>
+    <Route path="/login" element={<Form/>}></Route>
+    <Route path="/"  index={true} element={<MyFragment/>}></Route>
+    </Routes>
+     
+    </Router>
+  )
   }
-
-  return (
-    <div className='container'>
-      {/* <Name/>
-      <Example names={['Python', 'Java', 'Javascript','C#']} />
-      <Example2 names={['React', 'React Native', 'Django','Flask']} />
-      <Form/> */}
-       <MyFragment/>
-    </div>
-  );
-}
-
 export default App;
